@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/static/css/main.8ef74da2.css",
+    "main.js": "/static/js/main.b016e054.js",
+    "static/media/photo_city.avif": "/static/media/photo_city.1cfe48bf0b3901ab3684.avif",
+    "static/media/theatre.webp": "/static/media/theatre.7faf47e064a86c44d463.webp",
+    "index.html": "/index.html",
+    "main.8ef74da2.css.map": "/static/css/main.8ef74da2.css.map",
+    "main.b016e054.js.map": "/static/js/main.b016e054.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8ef74da2.css",
+    "static/js/main.b016e054.js"
+  ]
+}
