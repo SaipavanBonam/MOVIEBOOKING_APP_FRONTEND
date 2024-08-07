@@ -8,7 +8,7 @@ function Signup() {
   const [phone, setPhone] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
-  const [touchedFields, setTouchedFields] = useState({
+  const [touchedFields,setTouchedFields] = useState({
     username: false,
     name: false,
     email: false,
