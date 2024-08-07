@@ -4,7 +4,6 @@ import moment from "moment";
 import { useSelector } from 'react-redux'
 
 import Nav from "./Nav";
-
 function Ticket() {
   // const user = useSelector((state) => state.user);
   // const [namee, setName] = useState();
