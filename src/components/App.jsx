@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { Routes, Route, useNavigate } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import Dashboard from "./Dashboard.jsx";
 import Contact from "./Contact";
  import About from "./About";
@@ -17,16 +17,18 @@ import { useDispatch, useSelector } from "react-redux";
 import { loginRedux } from "../redux/userSlice.js";
 function App() {
   const dispatch=useDispatch();
-  const navigate=useNavigate();
   const user=useSelector((state) => state.user)
   useEffect(() =>{
     const loggedinuser=localStorage.getItem("user");
     if(loggedinuser)
     {
       const founduser=JSON.parse(loggedinuser);
-      dispatch(loginRedux(founduser));
-      navigate('/home');
-      
+      // Only restore the session. Do NOT force-navigate to /home, otherwise a
+      // refresh on any page (e.g. /bookings) bounces the user away from it.
+      if(founduser && founduser.email)
+      {
+        dispatch(loginRedux(founduser));
+      }
     }
   },[])
   useEffect(() =>{

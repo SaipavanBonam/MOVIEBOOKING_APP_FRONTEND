@@ -943,6 +943,17 @@ li {
     padding-top: 10px;
   }
 }
+@media only screen and (max-width: 639px) {
+  .booking {
+    height: auto;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 15px;
+  }
+}
 .timings {
   padding-left: 90px;
   padding-top: 10px;
@@ -1027,6 +1038,17 @@ li {
   margin-right: 36px;
 }
 
+@media only screen and (max-width: 639px) {
+  .seat {
+    height: 13px;
+    width: 15px;
+    margin: 3px;
+  }
+  .seat:nth-of-type(5) {
+    margin-right: 20px;
+  }
+}
+
 .walk {
   height: 50px;
 }
@@ -1051,8 +1073,15 @@ li {
   align-items: center;
   justify-content: center;
   width: 420px;
+  max-width: 100%;
 
   margin: 10px auto;
+}
+@media only screen and (max-width: 639px) {
+  .showcase {
+    flex-wrap: wrap;
+    padding: 5px;
+  }
 }
 
 .showcase li {
@@ -1070,6 +1099,23 @@ li {
   max-width: fit-content;
 }
 
+/* Mobile only: the fit-content rule above is meant for the Booking seat
+   map, but ".container" is also used as Tailwind's container utility on
+   other pages (Ticket, Dashboard, About). On small screens that makes the
+   whole page shrink-wrap around its widest child and overflow horizontally. */
+@media only screen and (max-width: 767px) {
+  .container {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+@media only screen and (max-width: 639px) {
+  .container {
+    overflow-x: auto;
+    padding-bottom: 8px;
+  }
+}
+
 .row1 {
   display: flex;
   align-items: center;
@@ -1080,10 +1126,21 @@ li {
   background-color: grey;
   height: 90px;
   width: 400px;
+  max-width: 100%;
   margin: 15px auto;
 
   transform: rotateX(60deg);
   box-shadow: 0 3px 10px grey;
+}
+@media only screen and (max-width: 639px) {
+  .screen {
+    height: 60px;
+    width: 260px;
+  }
+  .content-screen {
+    padding-top: 10px;
+    font-size: 0.85em;
+  }
 }
 
 .content-screen {

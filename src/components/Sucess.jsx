@@ -61,11 +61,11 @@ function Success() {
   return (
     <>
      <div className="bg-gray-800">
-      <div className="bg-gray-800 flex flex-wrap justify-center items-center my-0 mx-auto rounded-lg shadow-md">
+      <div className="bg-gray-800 flex flex-wrap justify-center items-center my-0 mx-auto rounded-lg shadow-md px-4">
         <div>
           <figure>
             <img
-              className="w-96 h-auto"
+              className="w-full max-w-xs sm:w-96 h-auto mx-auto"
               src={`https://image.tmdb.org/t/p/w500/${photo}`}
               alt="Movie Poster"
             />
@@ -73,7 +73,7 @@ function Success() {
           </figure>
         </div>
 
-        <div className="w-96 ml-8 text-white">
+        <div className="w-full max-w-xs sm:w-96 sm:ml-8 mt-4 sm:mt-0 text-white">
           <div className="flex flex-wrap justify-between mb-4">
             <p>
               <span>{name}</span>

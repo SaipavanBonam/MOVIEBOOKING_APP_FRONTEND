@@ -84,14 +84,12 @@ function Payment() {
   };
   return (
     <div id="payment" className="bg-gray-800 flex flex-col items-center justify-center min-h-screen text-white">
-      <div className="payment bg-gray-800 p-6 rounded-lg shadow-md flex items-center justify-between mb-8 w-full max-w-4xl">
-        <div className="pay-photo mr-4 px-8">
+      <div className="payment bg-gray-800 p-6 rounded-lg shadow-md flex flex-col items-center sm:flex-row sm:justify-between mb-8 w-full max-w-4xl">
+        <div className="pay-photo mb-4 px-4 sm:mb-0 sm:mr-4 sm:px-8">
           <img
-            className="rounded-lg"
+            className="rounded-lg w-32 h-32 sm:w-[300px] sm:h-[300px] object-cover"
             src={`https://image.tmdb.org/t/p/w500/${photo}`}
             alt={title}
-            height="300"
-            width="300"
           />
         </div>
         <div className="pay-content">
@@ -137,7 +135,7 @@ function Payment() {
 
     <div className="payment-cost bg-gray-800 p-6 rounded-lg shadow-md w-full max-w-md">
   <h1 className="font-bold text-white">Select payment method</h1>
-  <div className="pay-cost flex justify-between mt-4">
+  <div className="pay-cost flex flex-wrap justify-between gap-2 mt-4">
     <button
       className={`paycost-button ${activeb === "button1" ? "border-black transform scale-125" : "border-gray-200"} flex items-center justify-center rounded-full p-4 focus:outline-none mr-2`}
       onClick={() => {

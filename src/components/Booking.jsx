@@ -115,7 +115,7 @@ function Booking(props) {
             value={data.value}
             className={`${
               activeb === data.name ? "bg-blue-500 text-white" : " bg-gray-800 text-white"
-            } border border-blue-500 rounded px-3 py-1 m-1`}
+            } border border-blue-500 rounded px-4 py-2 text-sm m-1 sm:px-3 sm:py-1`}
             onClick={() => handleSelect(data)}
           >
             {data.name}
