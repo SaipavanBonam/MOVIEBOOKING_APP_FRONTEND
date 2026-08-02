@@ -89,8 +89,8 @@ function Home() {
         <CToastBody>Welcome to Movie Time</CToastBody>
       </CToast>
 
-      <div className="latestmovies flex justify-between p-8">
-        <div className="text-white font-bold text-3xl">Latest Movies</div>
+      <div className="latestmovies flex flex-col sm:flex-row sm:justify-between sm:items-center gap-3 p-4 sm:p-6 md:p-8">
+        <div className="text-white font-bold text-xl sm:text-2xl md:text-3xl">Latest Movies</div>
         <div className="space-x-4">
           <a
             data-tooltip-id="my-tooltip2"
@@ -100,7 +100,7 @@ function Home() {
             <button
               onMouseEnter={tool}
               onClick={handleClick}
-              className="bg-blue-500 text-white px-4 py-2 rounded-md"
+              className="bg-blue-500 text-white px-4 py-2 rounded-md text-sm sm:text-base"
             >
               Sort By
             </button>
@@ -110,7 +110,7 @@ function Home() {
       </div>
 
       {count === 0 && (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-8 mt-8">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-3 sm:gap-6 lg:gap-8 px-3 sm:px-6 lg:px-8 mt-4 sm:mt-8">
           {movie.map((data) => (
             <Movie
               key={data.id}
@@ -129,7 +129,7 @@ function Home() {
       )}
 
       {count === 1 && releasedmovie && (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-8 mt-8">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-3 sm:gap-6 lg:gap-8 px-3 sm:px-6 lg:px-8 mt-4 sm:mt-8">
           {releasedmovie.map((data) => (
             <Movie
               key={data.id}
@@ -148,7 +148,7 @@ function Home() {
       )}
 
       {sortedmovies && count === 2 && (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-8 mt-8">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-3 sm:gap-6 lg:gap-8 px-3 sm:px-6 lg:px-8 mt-4 sm:mt-8">
           {sortedmovies.map((data) => (
             <Movie
               key={data.id}
