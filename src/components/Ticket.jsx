@@ -179,8 +179,7 @@ function Ticket() {
     <div className="relative group">
       <img
         src={`https://image.tmdb.org/t/p/w500/${mvedata?.poster_path}`}
-        className="w-600 pl-40 rounded-lg shadow-lg "
-        style={{ height: 400}} 
+        className="w-full max-w-xs mx-auto rounded-lg shadow-lg md:max-w-none md:mx-0 md:pl-40 md:h-[400px]"
         alt={title}
       />
     </div>
@@ -202,7 +201,7 @@ function Ticket() {
                 </div>
               </div>
               <div className="mt-4">
-                <ul className="flex">
+                <ul className="flex flex-wrap gap-y-2">
                   {days.map((data) => (
                     <li key={data.id} className="mr-4">
                       <button
@@ -221,7 +220,7 @@ function Ticket() {
                 </ul>
               </div>
               <div className="mt-4">
-                <ul className="flex">
+                <ul className="flex flex-wrap gap-y-2">
                   {theatres.map((data) => (
                     <li key={data.name} className="mr-4">
                       <button
@@ -241,7 +240,7 @@ function Ticket() {
               </div>
               {activebutton && activeb && (
                 <div className="mt-4">
-                  <ul className="flex">
+                  <ul className="flex flex-wrap gap-y-2">
                     {costs.map((data) => (
                       <li key={data.cost} className="mr-4">
                         <button
@@ -290,7 +289,7 @@ function Ticket() {
               </div>
               <div className="mt-8">
   <h2 className="text-3xl font-bold">Top Billed Cast</h2>
-  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4 mt-4">
+  <div className="grid grid-cols-3 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-2 sm:gap-4 mt-4">
     {credits && credits.length > 0 ? (
       credits.slice(0, Math.min(credits.length, 10)).map((c) => (
         <div
@@ -299,13 +298,12 @@ function Ticket() {
         >
           <img
             src={c.profile_path ? `${img_300}${c.profile_path}` : noPicture}
-            className="w-full object-cover"
-            style={{ height: 200 }}
+            className="w-full object-cover h-24 sm:h-[200px]"
             alt={c.name}
           />
-          <div className="p-2">
-            <h3 className="text-lg font-bold text-white">{c.name}</h3>
-            <p className="text-gray-400">{c.character}</p>
+          <div className="p-1 sm:p-2">
+            <h3 className="text-xs sm:text-lg font-bold text-white truncate">{c.name}</h3>
+            <p className="text-[10px] sm:text-base text-gray-400 truncate">{c.character}</p>
           </div>
         </div>
                 ))

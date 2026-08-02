@@ -46,8 +46,9 @@ function App() {
         const response = await result.json();
         if (response.alert) {
           dispatch(loginRedux(response.data.user));
-          console.log(response.data.user);
-          localStorage.setItem("user", JSON.stringify(user));
+          // Persist the user returned by the API, NOT the stale `user` from
+          // this render's closure (which is still the empty initial state).
+          localStorage.setItem("user", JSON.stringify(response.data.user));
           navigate("/home", {
             state: { name: response.data.user.name, mail: response.data.user.email },
           });
