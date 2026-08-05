@@ -25,12 +25,12 @@ export default function About() {
           <div className="flex flex-col space-y-4">
             <div className="flex items-center">
               <p className="text-lg font-bold mr-2">Created By:</p>
-              <p className="text-lg">SaiPavan Bonam</p>
+              <p className="text-lg">SphinxK</p>
             </div>
             <div className="flex items-center">
               <p className="text-lg font-bold mr-2">LinkedIn:</p>
               <a
-                href="https://www.linkedin.com/in/saipavanbonam/"
+                href=""
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-blue-500 hover:underline"
@@ -41,7 +41,7 @@ export default function About() {
             <div className="flex items-center">
               <p className="text-lg font-bold mr-2">GitHub:</p>
               <a
-                href="https://github.com/SaipavanBonam"
+                href=""
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-blue-500 hover:underline"
